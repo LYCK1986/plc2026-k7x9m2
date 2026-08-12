@@ -737,20 +737,14 @@ var DEADLINE = "2026-10-31T23:59:59+09:00";   // 申込締切（過ぎると受�
 
     fetch(GAS_URL, {
       method: 'POST',
-      body: JSON.stringify(payload)   // Content-Type未指定(text/plain)でpreflight回避
+      mode: 'no-cors',                 // 応答は読まない(GAS側で記録・メールが完結する設計)
+      body: JSON.stringify(payload)    // Content-Type未指定(text/plain)でpreflight回避
     })
-    .then(function(res){ return res.json(); })
-    .then(function(data){
-      if (data && data.ok) {
-        form.style.display = 'none';
-        document.querySelector('.form-note').style.display = 'none';
-        document.getElementById('thanksPanel').style.display = 'block';
-        document.getElementById('thanksPanel').scrollIntoView({behavior:'smooth', block:'center'});
-      } else if (data && data.error === 'closed') {
-        showClosed();
-      } else {
-        throw new Error((data && data.message) || 'unknown');
-      }
+    .then(function(){
+      form.style.display = 'none';
+      document.querySelector('.form-note').style.display = 'none';
+      document.getElementById('thanksPanel').style.display = 'block';
+      document.getElementById('thanksPanel').scrollIntoView({behavior:'smooth', block:'center'});
     })
     .catch(function(){
       showError('送信に失敗しました。電波状況をご確認のうえ再度お試しいただくか、幹事までご連絡ください。');

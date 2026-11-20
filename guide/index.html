@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>POG LEGEND CUP 当日のご案内</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--green:#173b2c;--green2:#24533f;--gold:#b8964f;--gold-l:#e9dcbc;--ink:#1f2421;--mute:#5d655f;--bg:#f7f4ec;--card:#fffdf8;--ng:#a33b2f;--navy:#1d3557}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.8;font-size:15px}
+  header{background:var(--green);color:#fff;padding:48px 20px 40px;text-align:center;border-bottom:4px solid var(--gold)}
+  header .en{font-family:"Shippori Mincho",serif;letter-spacing:.25em;color:var(--gold-l);font-size:13px}
+  header h1{font-family:"Shippori Mincho",serif;font-size:28px;margin:10px 0 6px;letter-spacing:.08em}
+  header p{margin:0;font-size:13px;opacity:.85}
+  main{max-width:720px;margin:0 auto;padding:24px 16px 60px}
+  section{background:var(--card);border-radius:12px;padding:24px 20px;margin-bottom:20px;border:1px solid #ece5d3}
+  h2{font-family:"Shippori Mincho",serif;color:var(--green);font-size:19px;margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--gold-l)}
+  h3{font-size:15px;color:var(--green2);margin:16px 0 6px}
+  ul{padding-left:1.3em;margin:6px 0} li{margin:3px 0}
+  .warn{background:#fbeeec;border-left:3px solid var(--ng);padding:10px 14px;border-radius:4px;font-size:14px;margin:12px 0}
+  .timeline{list-style:none;padding:0;margin:0}
+  .timeline li{display:flex;gap:14px;padding:8px 0;border-bottom:1px dashed #e4dccb}
+  .timeline li:last-child{border-bottom:none}
+  .timeline .t{font-family:"Shippori Mincho",serif;font-weight:700;color:var(--green);min-width:92px}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+  th,td{border:1px solid #e4dccb;padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#f3efe2;color:var(--green);font-weight:500;white-space:nowrap}
+  .tbd{background:#fff3c4;padding:0 4px;border-radius:3px}
+  .beginner{display:block;background:var(--navy);color:#fff;text-decoration:none;border-radius:12px;padding:22px 20px;margin:0 0 24px;text-align:center}
+  .beginner .tag{font-size:12px;letter-spacing:.15em;opacity:.8}
+  .beginner b{display:block;font-family:"Shippori Mincho",serif;font-size:20px;margin:4px 0}
+  .beginner span{font-size:13px;opacity:.9}
+  .beginner .go{display:inline-block;margin-top:12px;background:#fff;color:var(--navy);border-radius:999px;padding:6px 18px;font-size:14px;font-weight:700}
+  .msg{background:var(--green);color:#f3eedf;border-radius:12px;padding:26px 22px;margin-bottom:20px}
+  .msg p{margin:0 0 12px;font-family:"Shippori Mincho",serif;font-size:15px;line-height:2}
+  .msg .sign{text-align:right;color:var(--gold-l);margin:0}
+  footer{text-align:center;font-size:13px;color:var(--mute);padding:10px 16px 40px}
+  footer b{color:var(--ink)}
+  @media (max-width:520px){header h1{font-size:23px}}
+
+  .contact{display:flex;align-items:center;gap:14px;background:#fff;border:2px solid var(--green);border-radius:12px;padding:16px 18px;margin:0 0 24px}
+  .contact .ic{flex:none;width:44px;height:44px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center}
+  .contact .lb{font-size:12px;color:var(--mute);line-height:1.5}
+  .contact .nm{font-size:14px;font-weight:700}
+  .contact a.tel{display:block;font-size:24px;font-weight:700;color:var(--green);text-decoration:none;letter-spacing:.04em;line-height:1.3}
+
+  .rform{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+  .rform label{display:flex;flex-direction:column;font-size:14px;color:var(--green2);gap:4px}
+  .rform .req{display:inline-block;font-size:11px;background:var(--green);color:#fff;border-radius:3px;padding:0 5px;margin-left:6px;align-self:flex-start;position:relative;top:-1px}
+  .rform input,.rform textarea{font:inherit;padding:10px 12px;border:1px solid #d9d0bb;border-radius:8px;background:#fff}
+  .rform button{font:inherit;font-weight:700;background:var(--green);color:#fff;border:none;border-radius:999px;padding:12px;cursor:pointer}
+  .rform button:disabled{background:#9aa89f;cursor:default}
+  .rmsg{font-size:14px;min-height:1em}
+  .rmsg.ok{color:#2e6b4a}.rmsg.err{color:var(--ng)}
+
+  .fold{margin-top:10px;border:1px solid #d9d0bb;border-radius:10px;background:#fbf9f3}
+  .fold summary{cursor:pointer;list-style:none;padding:12px 16px;font-weight:700;color:var(--green);display:flex;justify-content:space-between;align-items:center}
+  .fold summary::-webkit-details-marker{display:none}
+  .fold summary::after{content:"＋";font-weight:400}
+  .fold[open] summary::after{content:"－"}
+  .fold .rform{padding:0 16px 16px;margin-top:0}
+</style>
+</head>
+<body>
+<header>
+  <div class="en">COURT TO TURF</div>
+  <h1>POG LEGEND CUP<br>当日のご案内</h1>
+  <p>2026年11月30日（月）京葉カントリー倶楽部</p>
+</header>
+
+<main>
+  <div class="contact">
+    <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+    <div>
+      <div class="lb">当日の連絡先（遅れそうな場合・お困りの際はこちらへ）</div>
+      <div class="nm">POG実行委員会　黒田ルーク</div>
+      <a class="tel" href="tel:08088115093">080-8811-5093</a>
+    </div>
+  </div>
+  <a class="beginner" href="beginner.html">
+    <div class="tag">FOR BEGINNERS</div>
+    <b>ゴルフが初めての方へ</b>
+    <span>服装・持ち物・レンタルクラブ・ルール・マナーを<br>まとめた専用ページをご用意しました</span><br>
+    <span class="go">初心者ガイドを見る →</span>
+  </a>
+
+  <section>
+    <h2>当日の流れ</h2>
+    <div class="warn" style="background:#f3efe2;border-left-color:var(--gold);margin-top:0">今回は貸切です。<br>フロントにて受付をする必要はありません。直接コンペ受付にてロッカーキーをお渡しします。</div>
+    <ul class="timeline">
+      <li><span class="t">6:30〜7:30</span><span>受付（最終受付 7:30）。参加費 30,000円を現金でお支払いください</span></li>
+      <li><span class="t">8:00</span><span>開会式</span></li>
+      <li><span class="t">8:30</span><span>スタート（アウト・イン）</span></li>
+      <li><span class="t">15:30〜18:00</span><span>パーティ・表彰式</span></li>
+    </ul>
+    <p style="font-size:14px;margin:10px 0 0;color:var(--ng)"><b>※参加費は現金のみとなります。カード等での決済はご利用いただけません。</b></p>
+    <p style="font-size:14px;margin:6px 0 0">練習場・パター練習場・アプローチ練習場は無料でご利用いただけます。</p>
+    <p style="font-size:14px;margin:6px 0 0">プロショップではロッカーキー付けでお買い物いただけます。その場合は、お帰りの際に個別精算をお願いします。</p>
+  </section>
+
+  <section>
+    <h2>アクセス</h2>
+    <h3>お車の方</h3>
+    <p style="margin:0">当日は平日のため、高速を降りた後の一般道が6:30頃から通勤渋滞と重なります。<b>7:00頃の到着を目安</b>に、余裕を持ってお越しください。</p>
+    <h3>電車の方</h3>
+    <p style="margin:0">JR総武本線・都賀駅の<b>東口</b>からクラブバスを運行します（所要時間 約20分）。<br>
+    行き：<b>都賀駅東口 6:45発</b>（1便のみ・定員23名）<br>
+    帰り：クラブハウス <b>18:15頃発</b>（パーティ終了後、状況に合わせて出発します）<br>
+    乗り場は<a href="https://www.keiyo-cc.co.jp/access">京葉カントリー倶楽部のアクセスページ</a>をご確認ください。</p>
+    <p style="font-size:13px;color:var(--mute);margin:6px 0 0">※行きは1便のみです。乗り遅れた場合は、都賀駅からタクシーでお越しください。</p>
+  </section>
+
+  <section id="receipt">
+    <h2>領収書について</h2>
+    <p style="margin-top:0">大変申し訳ございませんが、インボイス制度の関係上、領収書は<b>京葉カントリー倶楽部から後日、手書きのものを郵送</b>でのお渡しとなります。当日のお渡しはございません。</p>
+    <p>領収書が必要な方は、下記のフォームからお申し込みください。</p>
+
+    <details class="fold">
+      <summary>領収書の申し込みフォームを開く</summary>
+    <form id="receiptForm" class="rform" novalidate>
+      <label>お名前<span class="req">必須</span><input type="text" name="name" required autocomplete="name"></label>
+      <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required autocomplete="email"></label>
+      <label>電話番号<input type="tel" name="tel" autocomplete="tel"></label>
+      <label>領収書の宛名<span class="req">必須</span><input type="text" name="payee" required placeholder="例：株式会社〇〇"></label>
+      <label>郵便番号<span class="req">必須</span><input type="text" name="zip" required inputmode="numeric" autocomplete="postal-code" placeholder="例：123-4567"></label>
+      <label>送付先住所<span class="req">必須</span><input type="text" name="address" required autocomplete="street-address" placeholder="都道府県から建物名・部屋番号まで"></label>
+      <label>備考<textarea name="note" rows="2" placeholder="但し書きのご希望など"></textarea></label>
+      <button type="submit" id="receiptBtn">申し込む</button>
+      <div class="rmsg" id="receiptMsg" role="status" aria-live="polite"></div>
+    </form>
+    </details>
+  </section>
+
+  <section>
+    <h2>ドレスコード</h2>
+    <p style="margin-top:0">京葉カントリー倶楽部は名門です。ドレスコードは必ず守ってください。</p>
+    <ul>
+      <li>来場・退場時は必ず<b>革靴</b>（ソフトレザー可）で。ゴルフシューズでの来場・退場は不可</li>
+      <li><b>ジャケットかブレザー</b>を着用し、必ず<b>襟付きのシャツをパンツにイン</b>（モックネックは不可、タートルネックは襟の長さが5cm以上）</li>
+      <li>迷彩柄などはNG、カーゴパンツなども避けてください</li>
+      <li>クラブハウス内では必ず脱帽</li>
+      <li><b>あらゆるデニム素材・スウェット素材・ジャージ素材のウェアは禁止</b></li>
+      <li><b>パーティも来場・退場時と同じドレスコード</b>です（プレー時の服装では参加できません）</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>競技ルール</h2>
+    <table>
+      <tr><th>競技方式</th><td>18ホール ストロークプレー、新ペリア方式（ハンデ計算はダブルパーカット、ハンデ上限36）</td></tr>
+      <tr><th>ワープルール</th><td>全員対象。トリプルパー（ショート9打・ミドル12打・ロング15打）を打った時点でグリーンに乗っていない場合は、ボールとピンを結んだ線がグリーン端と交わる地点の6インチ内側にボールを置き、パターで続けます。スコアはトリプルパーの続きから数えます（例：ミドルで12打のあとワープ→13打目からパター）。パターでグリーンから出た場合も、出た所のグリーン端6インチ内側から打てます</td></tr>
+      <tr><th>ティー</th><td>男性：グリーンティー（レギュラー）<br>初心者の男性と女性：イエローティー（レディース）</td></tr>
+      <tr><th>スルーザグリーン</th><td>6インチリプレースOK</td></tr>
+      <tr><th>グリーン上</th><td>ワングリップOKはなし。カップに入るまで続けます</td></tr>
+      <tr><th>バンカー</th><td>初心者のみ、2打罰でバンカーの真横に出してプレー可</td></tr>
+      <tr><th>ニアピン</th><td>全てのショートホール</td></tr>
+      <tr><th>ドラコン</th><td>OUT 5番・IN 15番</td></tr>
+      <tr><th>スコア入力</th><td>マーカーがカートナビに、ホールごとのスコアとパット数を入力</td></tr>
+      <tr><th>OB</th><td>初心者：OBになった付近のフェアウェイから2打罰でプレー<br>経験者：暫定球を打つか、OBになった付近のフェアウェイから2打罰でプレーするかを選べます</td></tr>
+      <tr><th>ローカルルール</th><td>その他はローカルルールを適用。キャディさんの指示に従ってください</td></tr>
+    </table>
+    <p style="font-size:13px;color:var(--mute)">※6インチは、手の親指と小指をいっぱいに広げたくらいの距離です。各自で測ってください。<br>※上記以外は、ゴルフ規則に則って行います。</p>
+    <p style="font-size:13px;color:var(--mute)">同ネットの方が複数いる場合は、①グロスの少ない方 ②パット数の少ない方 ③バーディ＆パーの合計数の多い方 の順で順位を決めます。</p>
+    <div class="warn" style="background:#f3efe2;border-left-color:var(--gold)">貸切ですが、プレーファストを心がけてください。</div>
+  </section>
+
+  <div class="msg">
+    <p>貸切ですが、貸切だからこそ皆様がマナーを守り、ゴルフ場にご迷惑を掛けず、流石はテニスの王子様と言われます様に細心のご配慮を戴けますと幸いです。</p>
+    <p class="sign">許斐 剛</p>
+  </div>
+</main>
+
+<footer>
+  当日の連絡先（遅れそうな場合など）<br>
+  <b style="font-size:16px">POG実行委員会 黒田ルーク<br><a href="tel:08088115093" style="font-size:22px;color:inherit;text-decoration:none">080-8811-5093</a></b>
+</footer>
+
+<script>
+// Google Apps Script のウェブアプリURL（beginner.html と同じURL）
+const FORM_API_URL = "https://script.google.com/macros/s/AKfycbwU556NLrAKzIkAr9U7BUZ1GK7KKxfJjlHGRiIf1B8md1slR_MJ7wCxVPbDMGVSHg77cA/exec";
+
+(function(){
+  const form=document.getElementById("receiptForm"), btn=document.getElementById("receiptBtn"), msg=document.getElementById("receiptMsg");
+  function setMsg(t,c){msg.textContent=t;msg.className="rmsg "+(c||"");}
+  form.addEventListener("submit", async (e)=>{
+    e.preventDefault();
+    const fd=new FormData(form), d={type:"receipt"};
+    ["name","email","tel","payee","zip","address","note"].forEach(k=>d[k]=(fd.get(k)||"").trim());
+    if(!d.name||!d.email||!d.payee||!d.zip||!d.address){setMsg("必須項目を入力してください。","err");return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)){setMsg("メールアドレスの形式を確認してください。","err");return;}
+    btn.disabled=true; setMsg("送信中…");
+    try{
+      let r;
+      if(!FORM_API_URL){ r={ok:false,message:"現在フォームは準備中です。恐れ入りますが、少し時間をおいて再度お試しください。"}; }
+      else{
+        const res=await fetch(FORM_API_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)});
+        r=await res.json();
+      }
+      if(r.ok){form.reset();setMsg("お申し込みを受け付けました。後日、京葉カントリー倶楽部より郵送いたします。","ok");}
+      else setMsg(r.message||"送信できませんでした。","err");
+    }catch(err){setMsg("送信できませんでした。時間をおいて再度お試しください。","err");}
+    btn.disabled=false;
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>POG LEGEND CUP 初心者ガイド</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1d3557;--navy2:#2c4a72;--sky:#8fb3d9;--sky-l:#eef3f9;--gold:#b8964f;--ink:#1f2421;--mute:#5d655f;--bg:#f5f6f8;--card:#fff;--ng:#a33b2f;--ok:#2e6b4a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.8;font-size:15px}
+  header{background:var(--navy);color:#fff;padding:44px 20px 36px;text-align:center;border-bottom:4px solid var(--sky)}
+  header .en{font-family:"Shippori Mincho",serif;letter-spacing:.25em;color:#cfdcec;font-size:13px}
+  header h1{font-family:"Shippori Mincho",serif;font-size:27px;margin:10px 0 6px;letter-spacing:.06em}
+  header p{margin:0;font-size:13px;opacity:.85}
+  .back{display:inline-block;margin-top:14px;color:#cfdcec;font-size:13px;text-decoration:none;border-bottom:1px solid #cfdcec}
+  main{max-width:720px;margin:0 auto;padding:24px 16px 60px}
+  nav{background:var(--card);border:1px solid #dbe4ef;border-radius:10px;padding:14px 18px;margin-bottom:28px}
+  nav ol{margin:0;padding-left:1.4em;columns:2;column-gap:24px;font-size:14px}
+  nav a{color:var(--navy2);text-decoration:none}
+  section{background:var(--card);border-radius:12px;padding:24px 20px;margin-bottom:20px;border:1px solid #e3e8ef;border-left:4px solid var(--navy)}
+  h2{font-family:"Shippori Mincho",serif;color:var(--navy);font-size:19px;margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid #dbe4ef;display:flex;gap:10px;align-items:baseline}
+  h2 .num{color:var(--sky);font-size:14px;letter-spacing:.1em}
+  h3{font-size:15px;color:var(--navy2);margin:18px 0 8px}
+  ul{padding-left:1.3em;margin:6px 0} li{margin:3px 0}
+  p{margin:8px 0}
+  .note{background:var(--sky-l);border-left:3px solid var(--sky);padding:10px 14px;border-radius:4px;font-size:14px;margin:12px 0}
+  .warn{background:#fbeeec;border-left:3px solid var(--ng);padding:10px 14px;border-radius:4px;font-size:14px;margin:12px 0}
+  .steps{list-style:none;padding:0;margin:0;counter-reset:s}
+  .steps li{position:relative;padding:8px 0 8px 40px;border-bottom:1px dashed #dbe4ef}
+  .steps li:last-child{border-bottom:none}
+  .steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:9px;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center}
+  .steps .t{font-weight:700;color:var(--navy);margin-right:6px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+  .box{border-radius:8px;padding:12px 14px;font-size:14px}
+  .box h4{margin:0 0 6px;font-size:14px}
+  .box.ok{background:#eef5f0;border:1px solid #c9dfd0}.box.ok h4{color:var(--ok)}
+  .box.ng{background:#fbf0ee;border:1px solid #ecd0cb}.box.ng h4{color:var(--ng)}
+  .box ul{padding-left:1.1em}
+  .check{list-style:none;padding:0}
+  .check li{padding-left:28px;position:relative;margin:6px 0}
+  .check li::before{content:"";position:absolute;left:0;top:5px;width:16px;height:16px;border:1.5px solid var(--sky);border-radius:3px}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+  th,td{border:1px solid #e3e8ef;padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--sky-l);color:var(--navy);font-weight:500;white-space:nowrap}
+  .req{display:inline-block;font-size:11px;background:var(--navy);color:#fff;border-radius:3px;padding:0 5px;margin-right:4px}
+  .opt{display:inline-block;font-size:11px;background:#e3e8ef;color:var(--navy);border-radius:3px;padding:0 5px;margin-right:4px}
+  .tbd{background:#fff3c4;padding:0 4px;border-radius:3px}
+  footer{text-align:center;font-size:13px;color:var(--mute);padding:10px 16px 40px}
+  footer b{color:var(--ink)} footer a{color:var(--navy2)}
+  @media (max-width:520px){nav ol{columns:1}.grid2{grid-template-columns:1fr}header h1{font-size:22px}th{white-space:normal}}
+
+  .contact{display:flex;align-items:center;gap:14px;background:#fff;border:2px solid var(--navy);border-radius:12px;padding:16px 18px;margin:0 0 24px}
+  .contact .ic{flex:none;width:44px;height:44px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center}
+  .contact .lb{font-size:12px;color:var(--mute);line-height:1.5}
+  .contact .nm{font-size:14px;font-weight:700}
+  .contact a.tel{display:block;font-size:24px;font-weight:700;color:var(--navy);text-decoration:none;letter-spacing:.04em;line-height:1.3}
+
+  .stock{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .st{background:var(--sky-l);border-radius:8px;padding:10px 6px;text-align:center}
+  .st .lb{display:block;font-size:12px;color:var(--navy)}
+  .st .n{font-size:26px;font-weight:700;color:var(--navy);line-height:1.3}
+  .st .of{font-size:12px;color:var(--mute);margin-left:2px}
+  .st.zero{background:#f1f1f1}.st.zero .n{color:#aaa}
+  .st.zero .lb::after{content:"（受付終了）"}
+  .rform{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .rform label{display:flex;flex-direction:column;font-size:14px;color:var(--navy2);gap:4px}
+  .rform input[type=text],.rform input[type=email]{font:inherit;padding:10px 12px;border:1px solid #cfd8e3;border-radius:8px;background:#fff}
+  .rform fieldset{border:none;padding:0;margin:0}
+  .rform legend{font-size:14px;color:var(--navy2);margin-bottom:4px}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .opt-r{flex-direction:row!important;align-items:center;gap:8px!important;border:1px solid #cfd8e3;border-radius:8px;padding:10px 12px;background:#fff;cursor:pointer}
+  .opt-r.disabled{opacity:.45;cursor:not-allowed}
+  .opt-r.disabled span::after{content:"（受付終了）";font-size:12px}
+  .rform button{font:inherit;font-weight:700;background:var(--navy);color:#fff;border:none;border-radius:999px;padding:12px;cursor:pointer}
+  .rform button:disabled{background:#9aa8ba;cursor:default}
+  .rmsg{font-size:14px;min-height:1em}
+  .rmsg.ok{color:var(--ok)}.rmsg.err{color:var(--ng)}
+  @media (max-width:520px){.stock{grid-template-columns:repeat(2,1fr)}.opts{grid-template-columns:1fr}}
+
+  .fold{margin-top:10px;border:1px solid #cfd8e3;border-radius:10px;background:#f8fafc}
+  .fold summary{cursor:pointer;list-style:none;padding:12px 16px;font-weight:700;color:var(--navy);display:flex;justify-content:space-between;align-items:center}
+  .fold summary::-webkit-details-marker{display:none}
+  .fold summary::after{content:"＋";font-weight:400}
+  .fold[open] summary::after{content:"－"}
+  .fold .rform{padding:0 16px 16px;margin-top:0}
+  .closing{background:var(--navy);color:#fff;border-radius:12px;padding:28px 22px;text-align:center;margin-top:28px}
+  .closing .en{font-family:"Shippori Mincho",serif;letter-spacing:.25em;font-size:12px;color:#cfdcec;margin:0 0 8px}
+  .closing p{margin:0;line-height:2;font-family:"Shippori Mincho",serif}
+  .closing b{color:#ffe7a8}
+</style>
+</head>
+<body>
+<header>
+  <div class="en">FOR BEGINNERS</div>
+  <h1>POG LEGEND CUP<br>初心者ガイド</h1>
+  <p>ゴルフが初めての方のための、当日までの準備と当日の過ごし方</p>
+  <a class="back" href="index.html">← 当日のご案内（全体）に戻る</a>
+</header>
+
+<main>
+  <div class="contact">
+    <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+    <div>
+      <div class="lb">当日の連絡先（遅れそうな場合・お困りの際はこちらへ）</div>
+      <div class="nm">POG実行委員会　黒田ルーク</div>
+      <a class="tel" href="tel:08088115093">080-8811-5093</a>
+    </div>
+  </div>
+  <nav>
+    <ol>
+      <li><a href="#flow">当日の流れ</a></li>
+      <li><a href="#dress">服装のOK・NG</a></li>
+      <li><a href="#items">持ち物・必要な小物</a></li>
+      <li><a href="#buy">ウェア・道具の揃え方</a></li>
+      <li><a href="#rental">レンタルクラブ</a></li>
+      <li><a href="#basic">ゴルフの基本ルール</a></li>
+      <li><a href="#special">今回の特別ルール</a></li>
+      <li><a href="#manner">マナー</a></li>
+      <li><a href="#words">よく使う用語</a></li>
+    </ol>
+  </nav>
+
+  <section id="flow">
+    <h2><span class="num">01</span>当日の流れ</h2>
+    <p style="margin-top:0">当日は<b>「来場・パーティ用」</b>と<b>「ラウンド用」</b>の2着が必要です。流れはこうなります。</p>
+    <ol class="steps">
+      <li><span class="t">来場</span>ジャケット＋襟付きシャツ＋革靴で。最終受付は7:30、7:00頃の到着がおすすめです</li>
+      <li><span class="t">受付</span>運営スタッフに参加費 30,000円を現金でお支払いいただき、ロッカーキーを受け取ります（フロントではありません）</li>
+      <li><span class="t">着替え</span>ロッカーでゴルフウェア・ゴルフシューズに着替えます。靴の履き替えは必ずロッカー室にて行いましょう</li>
+      <li><span class="t">練習</span>練習場・パター練習場・アプローチ練習場が無料。体をほぐしておきましょう</li>
+      <li><span class="t">8:00 開会式</span></li>
+      <li><span class="t">8:30〜 ラウンド</span>カートで回ります。前半9ホールのあと、クラブハウスで昼食。その後後半9ホール</li>
+      <li><span class="t">ラウンド後</span>クラブハウスのお風呂に入れます。汗を流してから、ロッカーで来場時の服装（ジャケット・革靴）に着替えます</li>
+      <li><span class="t">15:30 パーティ</span>表彰式を含めて18:00まで</li>
+      <li><span class="t">お帰り</span>フロントにロッカーキーを返却します。プロショップで買い物をした方は、ロッカーキーに付けた分をここで各自精算してください</li>
+    </ol>
+  </section>
+
+  <section id="dress">
+    <h2><span class="num">02</span>服装のOK・NG</h2>
+    <h3>来場・退場時／パーティ</h3>
+    <div class="grid2">
+      <div class="box ok"><h4>OK</h4><ul>
+        <li>ジャケット・ブレザー（スポーツジャケット可）</li>
+        <li>襟付きシャツ（裾はパンツにイン）</li>
+        <li>革靴（ソフトレザー可）</li>
+      </ul></div>
+      <div class="box ng"><h4>NG</h4><ul>
+        <li>ブルゾン・ジャンパー・ウインドブレーカー</li>
+        <li>ゴルフシューズ・スニーカー・サンダル</li>
+        <li>ゴルフウェアのままパーティに出る</li>
+      </ul></div>
+    </div>
+    <h3>ラウンド中</h3>
+    <div class="grid2">
+      <div class="box ok"><h4>OK</h4><ul>
+        <li>襟付きのポロシャツ（裾はパンツにイン）</li>
+        <li>タートルネック・ハイネック（首の立ち上がり5cm以上）</li>
+        <li>襟付きシャツの上にセーター</li>
+        <li>ベルトを通すパンツ・スカート</li>
+        <li>帽子</li>
+      </ul></div>
+      <div class="box ng"><h4>NG</h4><ul>
+        <li>Tシャツ・モックネック・トレーナー</li>
+        <li>デニム・スウェット・ジャージ素材すべて</li>
+        <li>カーゴパンツ・ジョガーパンツ・七分丈</li>
+        <li>迷彩柄・極彩色・大きなロゴ入り</li>
+      </ul></div>
+    </div>
+    <p style="font-size:13px;color:var(--mute)">タートルネックとモックネックの違いは首の高さ。迷ったら「首元が5cm以上立ち上がっているか」で判断してください。</p>
+    <div class="warn">クラブハウス内では帽子を脱ぎます。タオルを首や腰にかけるのもNGです。</div>
+  </section>
+
+  <section id="items">
+    <h2><span class="num">03</span>持ち物・必要な小物</h2>
+    <h3>来場時に着ていく・履いていく</h3>
+    <ul class="check">
+      <li>ジャケット（またはブレザー）</li>
+      <li>襟付きシャツ・ベルト付きのパンツ</li>
+      <li>革靴</li>
+    </ul>
+    <h3>バッグに入れていく（ラウンド用）</h3>
+    <ul class="check">
+      <li>ゴルフウェア（襟付きポロ・パンツ・ベルト）</li>
+      <li>ゴルフシューズ（スパイクレス／ソフトスパイク）</li>
+      <li>防寒着（セーター・機能性インナーなど）</li>
+      <li>ゴルフクラブ（お持ちでない方は <a href="#rental">レンタル</a>）</li>
+    </ul>
+    <div class="note">11月末の朝は冷え込みます。ラウンド中は重ね着で調整を。ウインドブレーカーはラウンド中なら着られますが、来場時の上着にはなりません。</div>
+    <h3>必要な小物</h3>
+    <table>
+      <tr><th>帽子</th><td><span class="req">必須</span>キャップかバイザー。コース内では着用、クラブハウス内では脱ぎます</td></tr>
+      <tr><th>ゴルフグローブ</th><td><span class="req">必須</span>利き手と反対の手にはめる片手用（右打ちなら左手）。試着して選ぶのがおすすめ</td></tr>
+      <tr><th>ゴルフボール</th><td><span class="req">必須</span>林や池でなくしやすいので1ダース以上。ロストボール（中古）で十分です</td></tr>
+      <tr><th>ティー</th><td><span class="req">必須</span>ドライバー用の長いティーと、アイアン用の短いティーを数本ずつ</td></tr>
+      <tr><th>ボールマーカー</th><td><span class="req">必須</span>グリーン上でボールを拾うときに、元の位置に置く目印。コインでも代用できます</td></tr>
+      <tr><th>グリーンフォーク</th><td><span class="req">必須</span>グリーン上のボールの落下跡（ピッチマーク）を直す道具。マーカーとセットのものが便利</td></tr>
+      <tr><th>小物ポーチ</th><td><span class="opt">便利</span>ボール・ティー・マーカーなどを入れてカートに持ち込みます</td></tr>
+      <tr><th>防寒小物</th><td><span class="opt">便利</span>両手用の防寒グローブ、カイロ、ネックウォーマーなど（クラブハウス内では外してください）</td></tr>
+      <tr><th>ハンドタオル</th><td><span class="opt">便利</span>クラブやボールを拭くのに使います</td></tr>
+      <tr><th>お財布</th><td><span class="req">必須</span>参加費 30,000円（受付で現金でお支払い）と、お帰りの際の精算用。プロショップでの買い物はロッカーキーに付けておけるので、ラウンド中にお財布を持ち歩く必要はありません</td></tr>
+    </table>
+  </section>
+
+  <section id="buy">
+    <h2><span class="num">04</span>ウェア・道具の揃え方</h2>
+    <p style="margin-top:0">高いゴルフブランドで揃える必要はありません。ドレスコードを満たしていれば十分です。</p>
+    <table>
+      <tr><th>ポロシャツ・パンツ</th><td>ユニクロ・GUなどで、<b>襟付きのポロシャツ</b>と<b>ベルトを通すスラックス・チノパン</b>を選べばOK。ジョガーパンツ、スウェット素材、大きなロゴ入りは避けてください</td></tr>
+      <tr><th>ゴルフシューズ</th><td>ゴルフ5・ヴィクトリアゴルフ・二木ゴルフなどのゴルフ量販店で、セール品やスパイクレスの入門モデルが手頃です</td></tr>
+      <tr><th>小物類</th><td>グローブ・ボール・ティー・マーカー・グリーンフォークは、ゴルフ量販店でまとめて揃います</td></tr>
+      <tr><th>ジャケット・革靴</th><td>お手持ちのもので大丈夫です</td></tr>
+    </table>
+    <div class="note">忘れ物があった場合は、クラブハウス内のプロショップで購入できます。購入時のお支払いは不要で、ロッカーキーに付けておき、お帰りの際にフロントへロッカーキーを返却するときにまとめて精算します。ただし割高になるので、できるだけ事前にご準備ください。</div>
+  </section>
+
+  <section id="rental">
+    <h2><span class="num">05</span>レンタルクラブ</h2>
+    <p style="margin-top:0"><b>ゴルフが初めてで、クラブをお持ちでない方</b>を対象に、無料で貸し出します。先着順・事前申し込み制です。</p>
+    <div class="note">クラブをお持ちの方はご持参ください。シューズの貸し出しはありません。</div>
+
+    <h3>残りのセット数</h3>
+    <div class="stock" id="stock">
+      <div class="st" data-k="male_right"><span class="lb">男性・右利き</span><span class="n">–</span><span class="of">/ 3</span></div>
+      <div class="st" data-k="male_left"><span class="lb">男性・左利き</span><span class="n">–</span><span class="of">/ 1</span></div>
+      <div class="st" data-k="female_right"><span class="lb">女性・右利き</span><span class="n">–</span><span class="of">/ 2</span></div>
+      <div class="st" data-k="female_left"><span class="lb">女性・左利き</span><span class="n">–</span><span class="of">/ 1</span></div>
+    </div>
+
+    <details class="fold">
+      <summary>レンタルクラブの申し込みフォームを開く</summary>
+    <form id="rentalForm" class="rform" novalidate>
+      <label>お名前<input type="text" name="name" required autocomplete="name"></label>
+      <label>メールアドレス<input type="email" name="email" required autocomplete="email"></label>
+      <fieldset>
+        <legend>希望するセット</legend>
+        <div class="opts" id="setOpts">
+          <label class="opt-r"><input type="radio" name="set" value="male_right" required><span>男性・右利き</span></label>
+          <label class="opt-r"><input type="radio" name="set" value="male_left"><span>男性・左利き</span></label>
+          <label class="opt-r"><input type="radio" name="set" value="female_right"><span>女性・右利き</span></label>
+          <label class="opt-r"><input type="radio" name="set" value="female_left"><span>女性・左利き</span></label>
+        </div>
+      </fieldset>
+      <button type="submit" id="rentalBtn">申し込む</button>
+      <div class="rmsg" id="rentalMsg" role="status" aria-live="polite"></div>
+    </form>
+    </details>
+    <div class="warn" id="soldoutNote" hidden>ご希望のセットの貸し出し予定数に達しています。それでもレンタルをご希望の方は、下記の連絡先まで個別にご連絡ください。<br><b>POG実行委員会 黒田ルーク　<a href="tel:08088115093" style="color:inherit">080-8811-5093</a></b></div>
+  </section>
+
+  <section id="basic">
+    <h2><span class="num">06</span>ゴルフの基本ルール</h2>
+    <h3>スコアの数え方</h3>
+    <ul>
+      <li>ボールをカップに入れるまでに打った回数がそのホールのスコア。18ホールの合計を競います</li>
+      <li>空振りも1打。ペナルティ（罰打）があればそれも足します</li>
+    </ul>
+    <h3>打つ順番</h3>
+    <ul>
+      <li>ティーショット（各ホールの1打目）は、前のホールのスコアが良かった人から</li>
+      <li>2打目以降は、カップから遠い人から</li>
+      <li>準備ができた人から打つ「レディゴルフ」もOK。同じ組で声をかけ合いましょう</li>
+    </ul>
+    <h3>困ったときのルール</h3>
+    <table>
+      <tr><th>OB<br>（白杭の外）</th><td>コースの外に出たボール。1打罰で、打った場所から打ち直します</td></tr>
+      <tr><th>暫定球</th><td>打ったボールがOBかもしれない、見つからないかもしれないときは、その場で「暫定球を打ちます」と同じ組の人に伝えて、もう1球打っておきます。元のボールが見つかってOBでなければそちらでプレーし、OBや見つからなかった場合は暫定球でそのまま続けます。戻って打ち直す手間が省けます</td></tr>
+      <tr><th>池・ペナルティエリア<br>（赤杭・黄杭）</th><td>1打罰で、エリアの外にボールを出して（ドロップして）プレーします。場所はキャディさんに確認を</td></tr>
+      <tr><th>ボールが<br>見つからない</th><td>探す時間は3分まで。見つからなければ1打罰で打ち直し。長く探して後ろを待たせないように</td></tr>
+      <tr><th>打てない場所</th><td>木の根元や茂みなどで打てないときは、1打罰でボールを動かせます（アンプレヤブル）</td></tr>
+    </table>
+    <div class="note">細かいルールを覚えなくても大丈夫です。分からないときはキャディさんや同じ組の方に聞いてください。</div>
+  </section>
+
+  <section id="special">
+    <h2><span class="num">07</span>今回の特別ルール</h2>
+    <p style="margin-top:0">初心者の方も楽しめるよう、今回はこんなルールで行います。</p>
+    <table>
+      <tr><th>ティー</th><td>男性も<b>イエローティー（レディース）</b>から打てます。ホールまでの距離が短くなります</td></tr>
+      <tr><th>ワープルール</th><td>グリーンに乗らないまま<b>トリプルパー</b>（ショート9打・ミドル12打・ロング15打）を打ったら、ボールを拾ってグリーンへ「ワープ」します。ボールとピンを結んだ線がグリーンの端と交わる地点の、6インチ内側にボールを置き、そこからパターで続けます。スコアはトリプルパーの続きから数えます（例：ミドルで12打のあとワープ→13打目からパター）。パターでグリーンから出てしまったら、出た所のグリーン端6インチ内側から打ち直せます。<br>せっかくのゴルフ、最後はパターでカップに入れる「カコン」を味わってください</td></tr>
+      <tr><th>6インチリプレース</th><td>グリーン以外では、ボールを6インチ以内で打ちやすい場所に置き直してOK。6インチは、手の親指と小指をいっぱいに広げたくらい（約15cm）。各自で測ってください</td></tr>
+      <tr><th>バンカー救済</th><td>バンカーから出せないときは、2打罰でバンカーの真横にボールを出してプレーできます</td></tr>
+      <tr><th>グリーン上</th><td>短い距離でも「OK」はありません。最後までカップに入れてください</td></tr>
+      <tr><th>スコア入力</th><td>組の中で決めたマーカー（記録係）が、カートナビに全員のスコアとパット数を入力します</td></tr>
+      <tr><th>OB</th><td>初心者の方は、OBになった付近のフェアウェイにボールを置き、2打罰でプレーを続けます。打ち直しや暫定球は不要です</td></tr>
+    </table>
+    <p style="font-size:13px;color:var(--mute)">※ここに書いていないことは、ゴルフ規則に則って行います。</p>
+  </section>
+
+  <section id="manner">
+    <h2><span class="num">08</span>マナー</h2>
+    <h3>安全のために</h3>
+    <ul>
+      <li>打つ人の前に出ない。素振りは周りに人がいないことを確認してから</li>
+      <li>打つ人がアドレスに入ったら（ボールの前で構えたら）、静かにして動かない</li>
+      <li>打球が人のいる方へ飛んだら、大きな声で「ファー！」。聞こえたら頭を守ってかがむ</li>
+      <li>コース内では帽子を着用</li>
+      <li>前の組が打球の届く範囲にいるうちは打たない</li>
+    </ul>
+    <h3>スムーズに進めるために</h3>
+    <p style="margin:0 0 4px"><b>貸切ですが、プレーファストを心がけてください。</b></p>
+    <ul>
+      <li>初心者のうちはボールをなくしやすいので、常に2〜3個をポケットなどに入れておき、いつでも出せるようにしておきましょう</li>
+      <li>前半・後半それぞれ2時間以内が目安。前の組と間を空けすぎない</li>
+      <li>自分の番が来る前に、クラブ選びや素振りを済ませておく</li>
+      <li>カートから離れるときは、使いそうなクラブを2〜3本持っていく</li>
+      <li>グリーン上の旗（ピン）はできるだけ立てたままパット</li>
+      <li>ホールアウトしたらすぐにグリーンを離れ、スコアはカートで確認</li>
+    </ul>
+    <h3>コースを大切にするために</h3>
+    <ul>
+      <li>バンカーは低いところから出入りし、打った後は足跡をレーキでならす</li>
+      <li>芝を削った跡（ディボット）には目土を入れる</li>
+      <li>グリーン上のピッチマークをグリーンフォークで直す</li>
+      <li>ティーイングエリアやグリーンを横切らない。ティーイングエリアには打つ人以外は入らない</li>
+    </ul>
+    <h3>グリーン上で</h3>
+    <ul>
+      <li>他の人のパットのライン（ボールからカップまでの線）を踏まない</li>
+      <li>パットする人の視界に入る位置に立たない、影をかけない</li>
+      <li>自分のボールが他の人の邪魔になるときは、マーカーを置いてボールを拾う</li>
+    </ul>
+    <h3>クラブハウスで</h3>
+    <ul>
+      <li>帽子を脱ぐ。タオルを首や腰にかけない</li>
+      <li>携帯電話は周りに配慮して使い、喫煙は決められた場所で</li>
+    </ul>
+  </section>
+
+  <section id="words">
+    <h2><span class="num">09</span>よく使う用語</h2>
+    <table>
+      <tr><th>ティーイングエリア</th><td>各ホールの1打目を打つ場所</td></tr>
+      <tr><th>フェアウェイ</th><td>芝が短く刈られた、打ちやすいエリア</td></tr>
+      <tr><th>ラフ</th><td>フェアウェイの周りの芝が長いエリア</td></tr>
+      <tr><th>グリーン</th><td>カップがある、芝がとても短いエリア。パターで打ちます</td></tr>
+      <tr><th>ピン</th><td>カップに立っている旗</td></tr>
+      <tr><th>アドレス</th><td>ボールを打つために構えること。人がアドレスに入ったら静かにして動かないのがマナー</td></tr>
+      <tr><th>パー</th><td>そのホールの基準打数（3〜5）</td></tr>
+      <tr><th>ボギー／ダブルボギー</th><td>パーより1打多い／2打多い</td></tr>
+      <tr><th>ショートホール</th><td>パー3のホール。今回は全てでニアピン</td></tr>
+      <tr><th>ニアピン</th><td>ショートホールの1打目で、ピンに一番近づけた人が勝ち</td></tr>
+      <tr><th>ドラコン</th><td>指定ホールの1打目で、一番遠くまで飛ばした人が勝ち</td></tr>
+      <tr><th>ハーフ</th><td>9ホール。前半（アウト）と後半（イン）に分かれます</td></tr>
+      <tr><th>マーカー</th><td>①スコアの記録係　②グリーン上でボールの位置に置く目印。両方の意味で使います</td></tr>
+      <tr><th>ファー</th><td>打球が人の方に飛んだときの危険を知らせる掛け声</td></tr>
+    </table>
+  </section>
+  <div class="closing">
+    <p class="en">ENJOY THE DAY</p>
+    <p>ルールやマナーを全部覚えていなくても大丈夫です。<br>分からないことは周りの方に聞きながら、<b>なにより楽しむこと</b>を大切に。<br>当日、皆さまとコースでお会いできるのを楽しみにしています。</p>
+  </div>
+</main>
+
+<footer>
+  当日の連絡先（遅れそうな場合など）<br>
+  <b style="font-size:16px">POG実行委員会 黒田ルーク<br><a href="tel:08088115093" style="font-size:22px;color:inherit;text-decoration:none">080-8811-5093</a></b><br><br>
+  <a href="index.html">← 当日のご案内（全体）に戻る</a>
+</footer>
+
+<script>
+// Google Apps Script のウェブアプリURL（index.html と同じURL）
+const RENTAL_API_URL = "https://script.google.com/macros/s/AKfycbwU556NLrAKzIkAr9U7BUZ1GK7KKxfJjlHGRiIf1B8md1slR_MJ7wCxVPbDMGVSHg77cA/exec";
+
+(function(){
+  const DEMO = !RENTAL_API_URL;
+  let stock = {male_right:{left:3},male_left:{left:1},female_right:{left:2},female_left:{left:1}};
+  const form = document.getElementById("rentalForm");
+  const btn = document.getElementById("rentalBtn");
+  const msg = document.getElementById("rentalMsg");
+  const note = document.getElementById("soldoutNote");
+
+  function render(){
+    let allZero = true;
+    document.querySelectorAll("#stock .st").forEach(el=>{
+      const k = el.dataset.k, left = stock[k] ? stock[k].left : 0;
+      el.querySelector(".n").textContent = left;
+      el.classList.toggle("zero", left<=0);
+      if(left>0) allZero=false;
+    });
+    document.querySelectorAll("#setOpts input").forEach(inp=>{
+      const left = stock[inp.value] ? stock[inp.value].left : 0;
+      inp.disabled = left<=0;
+      if(left<=0 && inp.checked) inp.checked=false;
+      inp.closest(".opt-r").classList.toggle("disabled", left<=0);
+    });
+    const anyZero = Object.values(stock).some(v=>v.left<=0);
+    note.hidden = !anyZero;
+    btn.disabled = allZero;
+    if(allZero) btn.textContent = "受付終了";
+  }
+  function setMsg(t, cls){ msg.textContent=t; msg.className="rmsg "+(cls||""); }
+
+  async function load(){
+    if(DEMO){ render(); return; }
+    try{
+      const r = await fetch(RENTAL_API_URL);
+      const d = await r.json();
+      if(d.ok){ stock = d.stock; }
+    }catch(e){ setMsg("残数を読み込めませんでした。時間をおいて再度お試しください。","err"); }
+    render();
+  }
+
+  form.addEventListener("submit", async (e)=>{
+    e.preventDefault();
+    const fd = new FormData(form);
+    const name=(fd.get("name")||"").trim(), email=(fd.get("email")||"").trim(), set=fd.get("set");
+    if(!name||!email||!set){ setMsg("お名前・メールアドレス・希望するセットを入力してください。","err"); return; }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ setMsg("メールアドレスの形式を確認してください。","err"); return; }
+    btn.disabled=true; setMsg("送信中…");
+    try{
+      let d;
+      if(DEMO){
+        d={ok:false,message:"現在フォームは準備中です。恐れ入りますが、少し時間をおいて再度お試しください。"};
+      }else{
+        const r = await fetch(RENTAL_API_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({name,email,set})});
+        d = await r.json();
+      }
+      if(d.stock) stock=d.stock;
+      if(d.ok){ form.reset(); setMsg("お申し込みを受け付けました。当日、受付でお渡しします。","ok"); }
+      else setMsg(d.message||"送信できませんでした。","err");
+    }catch(err){ setMsg("送信できませんでした。時間をおいて再度お試しください。","err"); }
+    btn.disabled=false; render();
+  });
+
+  load();
+})();
+</script>
+</body>
+</html>
